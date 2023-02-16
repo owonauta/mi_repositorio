@@ -1,0 +1,454 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: 'Source Serif Pro', serif;
+	font-weight: 400;
+}
+
+section
+{
+	height: 100vh;
+	width: 100%;
+	padding-left: 100px;
+	display: grid;
+	grid-template: 1fr 100px 1fr / 100%;
+	align-items: center;
+	position: fixed;
+	background-color: white;
+}
+
+
+h1,h2,h3,h4,h5,h6
+{
+	font-family: 'Bebas Neue';
+	z-index: 99;
+}
+
+h1
+{
+	font-size: 5em;
+	font-weight: 900;
+	color: #c80f2e;
+}
+
+h2
+{
+	font-size: 3em;
+	font-weight: 700;
+	color: #1d428f;
+}
+
+p
+{
+	font-family: 'Source Serif Pro';
+	color: #444;
+	margin-top: 10px;
+}
+
+img
+{
+	display: block;
+}
+
+header.menu1
+{
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	left:0;
+	top: calc(50vh - 50px);
+	z-index:2;
+	padding-left: 100px;
+	background-color: rgba(200,15,46,.7);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+header.menu1 img
+{
+	width: 50px;
+}
+
+nav
+{
+	height: 200px;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav ul
+{
+	list-style: none;
+	display: flex;
+}
+
+nav a
+{
+	text-decoration:none;
+	color: rgba(255,255,255,.7);
+	font-size: 1.2em;
+	margin: 0 10px;
+	padding: 10px 20px;
+	position: relative;
+	transition: all .3;
+}
+
+nav a::before
+{
+	content: "(";
+	position: absolute;
+	opacity:0;
+	color: white;
+	transform:translateX(-20px);
+	transition: all .5;
+}
+
+nav a::after
+{
+	content: ")";
+	position: absolute;
+	opacity:0;
+	color: white;
+	transform:translateX(20px);
+	transition: all .5;
+}
+
+nav a:hover::before, nav a:hover::after
+{
+	opacity: 1;
+	transform:translateX(0);
+}
+
+li
+{
+	text-transform: uppercase;
+	color: #1d4289;
+}
+
+/*
+EFECTOS
+
+.brackets:hover
+{
+	color: white;
+}
+
+.brackets:before, .brackets:after
+{
+	position: absolute;
+	opacity: 0;
+
+}
+
+.brackets:before
+{
+	content: '(';
+		transform: translateX(20px);
+}
+
+.brackets:after
+{
+	content: ')';
+	right: 0;
+	transform: translateX(-20px);
+}
+
+.brackets:hover:before, .brackets:hover:after
+{
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+*/
+
+
+/*
+FIN EFECTOS
+*/
+
+.info
+{
+	width: 80%;
+	max-width: 1000px;
+}
+
+.info a
+{
+	color: #1d428f;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.info a:hover
+{
+	color: #c80f2e;
+	font-weight: bold;
+}
+
+#uno:before
+{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("imagenes_website-NBA/fondo-01.jpg") no-repeat top center / cover;
+	opacity: 0.2;
+	z-index: -99;
+}
+
+#uno div:last-child
+{
+	grid-row: 3 / 4;
+}
+
+#uno img
+{
+	width: 30vh;
+}
+
+#uno:target, #dos:target, #tres:target #cuatro:target
+{
+	z-index: 1;
+}
+
+#dos:before
+{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("imagenes_website-NBA/fondo-02.jpg") no-repeat top center / cover;
+	opacity: 0.2;
+	z-index: -99;
+}
+
+#dos div:last-child
+{
+	grid-row: 3 / 4;
+}
+
+#dos img
+{
+	width: 50%;
+	margin: 20px 0;
+	padding: 10px;
+	background-color: white;
+	box-shadow: 1px 1px 5px black;
+}
+
+#tres:before
+{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	background: url("imagenes_website-NBA/fondo-03.jpg") no-repeat top center / cover;
+	opacity: 0.2;
+	z-index: -99;
+}
+
+#tres div:last-child
+{
+	grid-row: 3 / 4;
+	display: grid;
+	grid-template: auto 40px / repeat(3, 1fr);
+	height: 30vh;
+	gap: 10px;
+	align-content: center;
+	margin-top: 5px;
+}
+
+#tres div:last-child img
+{
+	border: 3px dashed #c80f2e;
+	padding: 10px;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+#tres div:last-child p
+{
+	font-size: 1.3em;
+	color: #1d4289;
+	font-weight: 700;
+}
+
+#tres div:last-child a img
+{
+	filter: grayscale(80%);
+	transition: .5;
+}
+
+#tres div:last-child a:hover img
+{
+	filter: grayscale(0);
+}
+
+/* PÁGS. SECUNDARIAS
+LARRY BIRD
+*/
+
+#bird
+{
+	display: grid;
+	grid-template: 75px auto / repeat(2, 1fr);
+	height: 100vh;
+	align-items: start;
+	align-content: center;
+	gap: 40px;
+}
+
+/*
+#bird:before
+{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+}
+*/
+#bird.info
+{
+	width: 100%;
+}
+
+
+/*Menú hamb*/
+
+.hamb
+{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	left: -100%;
+	background-color: #1d4289;
+	flex-direction: column;
+	opacity: .8;
+}
+
+.hamb ul
+{
+	display: block;
+	text-align: center;
+}
+
+.hamb:li:not(:first-child)
+{
+	margin-top: 40px;
+}
+
+
+.botonAbrir span
+{
+	background-color: #c80f2e;
+	padding: 3px;
+	width: 10px;
+	height: 3px;
+	gap: 4px;
+}
+
+.botonAbrir
+{
+	display: block;
+	position: absolute;
+	appearance: none;
+	-webkit-appearance:none;
+	-background-color: transparent;
+	border: 1px solid #1d4289;
+	border-radius: 5px;
+	width: 30px;
+	padding: 5px 5px 0;
+	cursor: pointer;
+	top: 100px;
+	left: 100px;
+	transition: all .5;
+}
+
+.botonAbrir:hover
+{
+	display: block;
+	background-color: #c80f2e;
+}
+
+.botonAbrir:hover span
+{
+	background-color: white;
+}
+
+.botonCerrar
+{
+	display: block;
+	position: absolute;
+	appearance: none;
+	-webkit-appearance:none;
+	background-color: transparent;
+	color: rgba(255,255,255,.7);
+	font-size: 2em;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	transform: all .5;
+}
+
+.botonCerrar:hover
+{
+	color: white;
+}
+
+.desplegado
+{
+	display: flex;
+}
+
+.blur
+{
+	filter: blur(5px);
+}
+
+@media screen and (max-width:1200px)
+{
+	#bird
+	{
+		display: block;
+		height: 100%;
+		padding-left: 100px;
+		padding-top: 200px;
+		padding-bottom: 40px;
+		position: static;
+		background-color: transparent;
+	}
+
+	#bird:before
+	{
+		position: fixed;
+		top: 0;
+		left: 0
+	}
+
+	#bird .info
+	{
+		max-width: 60%;
+		margin-top: 40px;
+	}
+
+	#bird img
+	{
+		margin-top: 40px;
+		width: 60%;
+		max-width: 550px;
+	}
+
+	.botonAbrir
+	{
+		right: calc(100% - 140px );
+	}
+}
